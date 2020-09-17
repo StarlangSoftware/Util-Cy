@@ -5,7 +5,7 @@ from Util.Permutation import Permutation
 class PermutationTest(unittest.TestCase):
 
     def test_next1(self):
-        permutation = Permutation(10)
+        permutation = Permutation(3)
         firstPermutation = permutation.get()
         self.assertEqual([0, 1, 2], firstPermutation)
         count = 1

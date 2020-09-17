@@ -3,6 +3,7 @@ from unittest import TestCase
 
 from Util.Subset import Subset
 
+
 class SubsetTest(TestCase):
 
     def test_next1(self):
