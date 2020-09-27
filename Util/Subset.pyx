@@ -23,7 +23,7 @@ cdef class Subset(object):
         for i in range(elementCount):
             self.set.append(rangeStart + i)
 
-    def get(self)->list:
+    cpdef list get(self):
         """
         Getter for the set list
 
@@ -34,7 +34,7 @@ cdef class Subset(object):
         """
         return self.set
 
-    def next(self)->bool:
+    cpdef bint next(self):
         """
         The next method generates the next subset.
 

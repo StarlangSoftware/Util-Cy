@@ -1,4 +1,4 @@
-from Subset cimport Subset
+from Util.Subset cimport Subset
 
 cdef class SubsetFromList(Subset):
 
@@ -29,7 +29,7 @@ cdef class SubsetFromList(Subset):
             self.__indexList.append(i)
             self.set.append(self.__elementList[self.__indexList[i]])
 
-    def next(self) -> bool:
+    cpdef bint next(self):
         """
         The next method generates the next subset from list.
 
