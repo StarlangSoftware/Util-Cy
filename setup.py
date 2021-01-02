@@ -7,9 +7,9 @@ setup(
     version='1.0.3',
     packages=['Util'],
     package_data={'Util': ['*.pxd', '*.pyx', '*.c']},
-    url='https://github.com/olcaytaner/Util-Cy',
+    url='https://github.com/StarlangSoftware/Util-Cy',
     license='',
     author='olcaytaner',
-    author_email='olcaytaner@isikun.edu.tr',
+    author_email='olcay.yildiz@ozyegin.edu.tr',
     description='Simple Utils'
 )
