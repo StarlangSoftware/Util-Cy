@@ -1,11 +1,10 @@
 import random
 
 
-cdef class RandomNormalizedArray(object):
+cdef class RandomArray(object):
 
-    cdef list __array
-
-    def __init__(self, itemCount: int):
+    @staticmethod
+    def normalizedArray(itemCount: int) -> list:
         """
         The constructor of RandomNormalizedArray class gets an integer itemCount as an input. Creates a list of
         size itemCount and loops through each element of the list and initializes them with a random number by using
@@ -16,23 +15,22 @@ cdef class RandomNormalizedArray(object):
         itemCount : int
             input defining array size.
         """
-        cdef double total
         cdef int i
+        cdef double total
+        cdef list array
         total = 0.0
-        self.__array = []
+        array = []
         for i in range(itemCount):
-            self.__array.append(random.uniform(0, 1))
-            total += self.__array[i]
+            array.append(random.uniform(0, 1))
+            total += array[i]
         for i in range(itemCount):
-            self.__array[i] /= total
+            array[i] /= total
+        return array
 
-    cpdef list get(self):
-        """
-        Getter for the double list.
-
-        Returns
-        ----------
-        list
-            the double list.
-        """
-        return self.__array
+    @staticmethod
+    def indexArray(itemCount: int, seed: int) -> list:
+        cdef list array
+        array = [i for i in range(itemCount)]
+        random.seed(seed)
+        random.shuffle(array)
+        return array
