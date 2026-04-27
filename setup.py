@@ -7,8 +7,8 @@ from Cython.Build import cythonize
 
 setup(
     ext_modules=cythonize(["Util/*.pyx"], compiler_directives={'language_level' : "3"}),
-    name='nlptoolkit-util-cy',
-    version='1.0.12',
+    name='nlptoolkit_util_cy',
+    version='1.0.13',
     packages=['Util'],
     package_data={'Util': ['*.pxd', '*.pyx', '*.c']},
     url='https://github.com/StarlangSoftware/Util-Cy',
